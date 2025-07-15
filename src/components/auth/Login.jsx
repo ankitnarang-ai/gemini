@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import PhoneLogin from "./PhoneLogin";
-
-import OtpVerification from "../../components/auth/OtpVerification"
+// import OtpVerification from "./OtpVerification.jsx"
 
 export default function LoginPage({ onSuccess }) {
   const [otpSent, setOtpSent] = useState(false);
@@ -23,7 +22,7 @@ export default function LoginPage({ onSuccess }) {
           {otpSent ? "Verify OTP" : "Login with Phone"}
         </h2>
 
-        {!otpSent ? (
+        {/* {!otpSent ? (
           <PhoneLogin
             onOtpSent={(data) => {
               setPhoneData(data);
@@ -32,7 +31,7 @@ export default function LoginPage({ onSuccess }) {
           />
         ) : (
           <OtpVerification phone={phoneData} onVerified={onSuccess} />
-        )}
+        )} */}
 
         <p className="text-sm text-center text-[var(--color-text-secondary)]">
           OTP is <code className="bg-[var(--color-background-elevated)] px-2 py-1 rounded text-[var(--color-text-primary)]">123456</code>
