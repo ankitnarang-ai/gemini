@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import PhoneLogin from "./PhoneLogin";
-import OtpVerification from "./OtpVerification";
+// import OtpVerification from "./OtpVerification";
 
 export default function LoginPage({ onSuccess }) {
   const [otpSent, setOtpSent] = useState(false);
@@ -30,7 +30,13 @@ export default function LoginPage({ onSuccess }) {
             }}
           />
         ) : (
-          <OtpVerification phone={phoneData} onVerified={onSuccess} />
+            <PhoneLogin
+            onOtpSent={(data) => {
+              setPhoneData(data);
+              setOtpSent(true);
+            }}
+          />
+        //   <OtpVerification phone={phoneData} onVerified={onSuccess} />
         )}
 
         <p className="text-sm text-center text-[var(--color-text-secondary)]">
