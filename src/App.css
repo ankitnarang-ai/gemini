@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+/* Tailwind v4 Theme Configuration with Gemini Colors */
+:root {
+  /* Primary Gemini Brand Colors */
+  --color-gemini-blue: #4285f4;
+  --color-gemini-green: #34a853;
+  --color-gemini-yellow: #fbbc05;
+  --color-gemini-red: #ea4335;
+  --color-gemini-purple: #9c27b0;
+
+  /* Background Colors */
+  --color-background: #ffffff;
+  --color-background-secondary: #f8f9fa;
+  --color-background-elevated: #f1f3f4;
+  --color-background-dark: #1a1a1a;
+  --color-background-dark-secondary: #2d2d2d;
+  --color-background-dark-elevated: #3c3c3c;
+
+  /* Surface Colors */
+  --color-surface: #ffffff;
+  --color-surface-secondary: #f1f3f4;
+  --color-surface-dark: #2d2d2d;
+  --color-surface-dark-secondary: #3c3c3c;
+
+  /* Text Colors */
+  --color-text-primary: #1f1f1f;
+  --color-text-secondary: #5f6368;
+  --color-text-tertiary: #80868b;
+  --color-text-primary-dark: #e8eaed;
+  --color-text-secondary-dark: #9aa0a6;
+  --color-text-tertiary-dark: #5f6368;
+
+  /* Border Colors */
+  --color-border: #e8eaed;
+  --color-border-secondary: #f1f3f4;
+  --color-border-dark: #5f6368;
+  --color-border-dark-secondary: #3c3c3c;
+
+  /* Interactive Colors */
+  --color-interactive-hover: #f1f3f4;
+  --color-interactive-active: #e8eaed;
+  --color-interactive-hover-dark: #3c3c3c;
+  --color-interactive-active-dark: #5f6368;
+  --color-interactive-focus: #4285f4;
+
+  /* Status Colors */
+  --color-success: #34a853;
+  --color-warning: #fbbc05;
+  --color-error: #ea4335;
+  --color-info: #4285f4;
+
+  /* Chat Interface Colors */
+  --color-chat-user: #f1f3f4;
+  --color-chat-assistant: #ffffff;
+  --color-chat-input: #f8f9fa;
+  --color-chat-user-dark: #3c3c3c;
+  --color-chat-assistant-dark: #2d2d2d;
+  --color-chat-input-dark: #2d2d2d;
+
+  /* Custom Border Radius */
+  --radius-gemini: 12px;
+  --radius-gemini-lg: 16px;
+  --radius-gemini-xl: 24px;
+
+  /* Shadows */
+  --shadow-gemini: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-gemini-dark: 0 1px 3px rgba(255, 255, 255, 0.1), 0 1px 2px rgba(255, 255, 255, 0.06);
+  --shadow-gemini-elevated: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  
+  /* Animation Duration */
+  --animate-duration-gemini: 200ms;
+}
+
+/* Root Variables for Dynamic Theme Switching */
+:root {
+  /* Light Mode (Default) */
+  --bg-primary: var(--color-background);
+  --bg-secondary: var(--color-background-secondary);
+  --bg-elevated: var(--color-background-elevated);
+  --surface-primary: var(--color-surface);
+  --surface-secondary: var(--color-surface-secondary);
+  --text-primary: var(--color-text-primary);
+  --text-secondary: var(--color-text-secondary);
+  --text-tertiary: var(--color-text-tertiary);
+  --border-primary: var(--color-border);
+  --border-secondary: var(--color-border-secondary);
+  --interactive-hover: var(--color-interactive-hover);
+  --interactive-active: var(--color-interactive-active);
+  --chat-user-bg: var(--color-chat-user);
+  --chat-assistant-bg: var(--color-chat-assistant);
+  --chat-input-bg: var(--color-chat-input);
+  --shadow-color: var(--shadow-gemini);
+}
+
+/* Dark Mode */
+.dark {
+  --bg-primary: var(--color-background-dark);
+  --bg-secondary: var(--color-background-dark-secondary);
+  --bg-elevated: var(--color-background-dark-elevated);
+  --surface-primary: var(--color-surface-dark);
+  --surface-secondary: var(--color-surface-dark-secondary);
+  --text-primary: var(--color-text-primary-dark);
+  --text-secondary: var(--color-text-secondary-dark);
+  --text-tertiary: var(--color-text-tertiary-dark);
+  --border-primary: var(--color-border-dark);
+  --border-secondary: var(--color-border-dark-secondary);
+  --interactive-hover: var(--color-interactive-hover-dark);
+  --interactive-active: var(--color-interactive-active-dark);
+  --chat-user-bg: var(--color-chat-user-dark);
+  --chat-assistant-bg: var(--color-chat-assistant-dark);
+  --chat-input-bg: var(--color-chat-input-dark);
+  --shadow-color: var(--shadow-gemini-dark);
+}
