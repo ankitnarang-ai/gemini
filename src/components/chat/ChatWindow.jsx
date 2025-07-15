@@ -13,7 +13,7 @@ export default function ChatWindow({ messages, isTyping, bottomRef }) {
 
   return (
     <div className="flex-1 overflow-y-auto">
-      <div className="max-w-4xl mx-auto px-6 py-4 space-y-6">
+      <div className="max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-5xl mx-auto px-2 sm:px-4 md:px-6 py-2 sm:py-4 space-y-4 sm:space-y-6">
         {messages.map((msg, i) => (
           <ChatBubble
             key={i}
@@ -25,39 +25,40 @@ export default function ChatWindow({ messages, isTyping, bottomRef }) {
         ))}
 
         {messages.length === 0 && !isTyping && (
-          <div className="flex justify-center items-center mt-64">
-            <div
-              className="text-4xl font-semibold text-[#448aff] "
-            >
-              Hello, Ankit 👋
+          <div className="flex justify-center items-center min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh]">
+            <div className="text-center px-4">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#448aff] mb-2">
+                Hello, Ankit 👋
+              </div>
+              <p className="text-sm sm:text-base text-[var(--text-secondary)] max-w-md mx-auto">
+                How can I help you today?
+              </p>
             </div>
           </div>
-
         )}
-
 
         {/* Gemini is typing */}
         {isTyping && (
-          <div className="group flex items-start gap-3">
+          <div className="group flex items-start gap-2 sm:gap-3 px-2 sm:px-0">
             {/* Gemini Avatar/Icon space */}
-            <div className="w-8 h-8 rounded-full bg-[var(--color-gemini-blue)] flex items-center justify-center flex-shrink-0 mt-1">
-              <div className="w-4 h-4 bg-white rounded-full"></div>
+            <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-[var(--color-gemini-blue)] flex items-center justify-center flex-shrink-0 mt-1">
+              <div className="w-3 h-3 sm:w-4 sm:h-4 bg-white rounded-full"></div>
             </div>
 
             {/* Message content */}
             <div className="flex-1 min-w-0">
-              <div className="text-sm text-[var(--text-secondary)] italic py-2">
+              <div className="text-sm sm:text-base text-[var(--text-secondary)] italic py-2">
                 Gemini is typing...
               </div>
 
               {/* Copy button */}
               <button
                 onClick={handleCopyTyping}
-                className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition
-                  opacity-0 group-hover:opacity-100 cursor-pointer text-xs flex items-center gap-1 mt-1"
+                className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors
+                  opacity-0 group-hover:opacity-100 cursor-pointer text-xs sm:text-sm flex items-center gap-1 mt-1 p-1 rounded hover:bg-[var(--interactive-hover)]"
               >
                 {copied ? <FiCheck size={14} /> : <FiCopy size={14} />}
-                {copied ? "Copied" : "Copy"}
+                <span className="hidden sm:inline">{copied ? "Copied" : "Copy"}</span>
               </button>
             </div>
           </div>

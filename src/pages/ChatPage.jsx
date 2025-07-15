@@ -113,7 +113,7 @@ export default function ChatPage() {
 
   return (
     <div className="flex h-screen">
-      <div className="w-64">
+      {/* <div className="w-64"> */}
         <Sidebar
           chats={chatrooms}
           onNewChat={handleNewChat}
@@ -123,7 +123,7 @@ export default function ChatPage() {
           activeChatId={activeChatId}
           isNewChatPending={isNewChatPending}
         />
-      </div>
+      {/* </div> */}
 
       <div className="flex-1 flex flex-col">
         <MessageHeader onClear={() => {
