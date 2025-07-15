@@ -36,7 +36,6 @@ export default function OTPVerify({ phone, onVerified }) {
         }
     };
 
-
     return (
         <form
             onSubmit={handleSubmit(onSubmit)}
@@ -62,3 +61,4 @@ export default function OTPVerify({ phone, onVerified }) {
         </form>
     );
 }
+
