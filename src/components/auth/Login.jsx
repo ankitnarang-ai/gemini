@@ -33,7 +33,8 @@ export default function LoginPage({ onSuccess }) {
                 ) : (
 
                     //   <OtpVerification phone={phoneData} onVerified={onSuccess} />
-                    <Otp phone={phoneNumber} onVerify={verifyOtp} />
+                              <Otp phone={phoneData} onVerified={onSuccess} />
+
                 )}
 
 
