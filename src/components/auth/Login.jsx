@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import PhoneLogin from "./PhoneLogin";
 import Otp from "./Otp";
-// import OtpVerification from "./OtpVerification";
 
 export default function LoginPage({ onSuccess }) {
     const [otpSent, setOtpSent] = useState(false);
@@ -32,8 +31,7 @@ export default function LoginPage({ onSuccess }) {
                     />
                 ) : (
 
-                    //   <OtpVerification phone={phoneData} onVerified={onSuccess} />
-                              <Otp phone={phoneData} onVerified={onSuccess} />
+                    <Otp phone={phoneData} onVerified={onSuccess} />
 
                 )}
 

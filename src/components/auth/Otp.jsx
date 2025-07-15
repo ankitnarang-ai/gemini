@@ -59,7 +59,7 @@ export default function Otp({ phone, onVerified }) {
             <p className="text-sm text-gray-500">OTP is 123456 (simulated)</p>
 
             <button
-                className="w-full bg-blue-500 hover:bg-blue-600 text-white p-2 rounded disabled:opacity-50"
+                className="cursor-pointer w-full bg-blue-500 hover:bg-blue-600 text-white p-2 rounded disabled:opacity-50"
                 type="submit"
             >
                 Verify OTP

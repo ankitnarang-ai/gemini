@@ -62,7 +62,7 @@ export default function PhoneLogin({ onOtpSent }) {
       onSubmit={handleSubmit(onSubmit)}
       className="space-y-4 max-w-sm mx-auto mt-10"
     >
-      <select {...register("country")} className="w-full border rounded p-2">
+      <select {...register("country")} className="cursor-pointer w-full border rounded p-2">
         <option value="">Select Country</option>
         {countries.map((c, i) => (
           <option key={i} value={c.code}>
@@ -86,7 +86,7 @@ export default function PhoneLogin({ onOtpSent }) {
       <button
         type="submit"
         disabled={loading}
-        className="w-full bg-blue-500 text-white rounded p-2 disabled:opacity-50"
+        className="cursor-pointer w-full bg-blue-500 text-white rounded p-2 disabled:opacity-50"
       >
         {loading ? "Sending OTP..." : "Send OTP"}
       </button>
