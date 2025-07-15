@@ -72,6 +72,19 @@
   --animate-duration-gemini: 200ms;
 }
 
+/* Add to your global styles if using custom animations */
+@keyframes fade-in-out {
+  0% { opacity: 0; transform: translateY(10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+.animate-fade-in-out {
+  animation: fade-in-out 3s ease-in-out;
+}
+
+
 /* Root Variables for Dynamic Theme Switching */
 :root {
   /* Light Mode (Default) */
