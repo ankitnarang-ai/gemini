@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import PhoneLogin from "./PhoneLogin";
 
-import OtpVerification from "./OtpVerification";
+import OtpVerification from "./OtpVerification.jsx"
 
 export default function LoginPage({ onSuccess }) {
   const [otpSent, setOtpSent] = useState(false);
