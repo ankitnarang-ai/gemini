@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import PhoneLogin from "./PhoneLogin";
 
-import OTPVerify from "./OtpVerification";
-// Change this later
+import OtpVerification from "./OtpVerification";
 
 export default function LoginPage({ onSuccess }) {
   const [otpSent, setOtpSent] = useState(false);
@@ -32,7 +31,7 @@ export default function LoginPage({ onSuccess }) {
             }}
           />
         ) : (
-          <OTPVerify phone={phoneData} onVerified={onSuccess} />
+          <OtpVerification phone={phoneData} onVerified={onSuccess} />
         )}
 
         <p className="text-sm text-center text-[var(--color-text-secondary)]">

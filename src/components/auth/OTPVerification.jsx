@@ -8,7 +8,7 @@ const otpSchema = z.object({
     otp: z.string().length(6, "OTP must be 6 digits"),
 });
 
-export default function OTPVerify({ phone, onVerified }) {
+export default function OtpVerification({ phone, onVerified }) {
     const [serverOtp] = useState("123456");
     const [error, setError] = useState("");
     const {
